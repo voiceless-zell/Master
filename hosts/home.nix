@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, isNixOS, ... }:
 
 {
   imports = [
@@ -22,18 +22,6 @@
   home.username = "zell";
   home.homeDirectory = "/home/zell";
   nixpkgs.config.allowUnfree = true;
-  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
-             "cuda-merged"
-             "cuda_cuobjdump"
-              "cuda_gdb"
-"cuda_nvcc"
-
-             "cuda_nvdisasm"
-             "cuda_nvprune"
-             "cuda_cccl"
-             "cuda_cudart"
-             "cuda_cupti"
-           ];
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
   # introduces backwards incompatible changes.
@@ -95,8 +83,11 @@
   #
   #  /etc/profiles/per-user/zell/etc/profile.d/hm-session-vars.sh
   #
+  
   home.sessionVariables = {
-    # EDITOR = "emacs";
+     EDITOR = "nvim";
+     __IS_NIXOS = if isNixOS then "1" else "0";
+
   };
 
   # Let Home Manager install and manage itself.

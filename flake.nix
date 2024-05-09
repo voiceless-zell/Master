@@ -18,16 +18,22 @@
     let
       pkgs = import nixpkgs { system = "x86_64-linux"; config.allowunfree = true;};
     in {
-      homeConfigurations."zell" = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
+      nixosConfigurations = (import ./hosts/nixos.nix);
+
+      homeConfigurations = (import ./hosts/home.nix);
+     # homeConfigurations."zell" = home-manager.lib.homeManagerConfiguration {
+     #   inherit pkgs;
 
         # Specify your home configuration modules here, for example,
         # the path to your home.nix.
-        modules = [ ./home.nix 
-        inputs.hyprland.homeManagerModules.default];
+     #   modules = [ ./home.nix 
+     #   inputs.hyprland.homeManagerModules.default];
 
+        extraSpecialArgs = {
+            isNixOS = false;
+          };
         # Optionally use extraSpecialArgs
         # to pass through arguments to home.nix
-      };
+    # };
     };
 }

@@ -2,15 +2,14 @@
   pkgs
 , lib
 , config
+, isNixOS
 , ...
 }:
-with lib;
-let
-cfg = config.modules.hyprland;
 
-in {
-  options.modules.hyprland = {enable = mkEnableOption "hyprland"; };
-  config = mkIf cfg.enable {
+{
+  lib.mkIf config.wayland.windowManager.hyperland.enable {
+home.packages = lib.mkIf isNixOS(
+    
   home.packages = with pkgs; [
     swww
     hyprpicker
@@ -26,7 +25,8 @@ in {
     wayland
     direnv
     grimblast
-  ];
+  ]
+);
   systemd.user.targets.hyprland-session.Unit.Wants = [ "xdg-desktop-autostart.target" ];
   wayland.windowManager.hyprland = {
       systemd.enable = true;
