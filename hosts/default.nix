@@ -11,7 +11,8 @@
     G14 = nixpkgs.lib.nixosSystem {
     specialArgs = {inherit self inputs;};
     modules =
-    [ (./G14/default.nix)]
+       [ (./G14/default.nix)]
+    ++ [ ( ./../users/zell.nix)]
 #++ [ (nixos-hardware.nixosModules.asus-zephyrus-ga401)]
    ;
   }; 
