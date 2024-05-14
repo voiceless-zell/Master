@@ -17,7 +17,13 @@
   outputs = { nixpkgs, home-manager, self, ... }@inputs:
     let
       pkgs = import nixpkgs { system = "x86_64-linux"; config.allowunfree = true;};
+      system = "x86_64-linux";
+      lib = nixpkgs.lib;
     in {
+      nixosConfigurations = import ./hosts/default.nix {
+          inherit self nixpkgs inputs ;
+        } ;
+      
       homeConfigurations."zell" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
 
