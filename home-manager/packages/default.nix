@@ -17,6 +17,7 @@
     config = mkIf cfg.enable {
         home.packages = with pkgs; [
       # others
+      firefox
       bitwarden
       p7zip
       neofetch

@@ -24,7 +24,7 @@
           inherit self nixpkgs inputs ;
         } ;
       
-      homeConfigurations."zell" = home-manager.lib.homeManagerConfiguration {
+      homeConfigurations = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
 
         # Specify your home configuration modules here, for example,
