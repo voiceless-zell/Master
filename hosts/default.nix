@@ -16,7 +16,7 @@
 #++ [ (nixos-hardware.nixosModules.asus-zephyrus-ga401)]
    ;
   }; 
- G14 = nixpkgs.lib.nixosSystem {
+    T480 = nixpkgs.lib.nixosSystem {
     specialArgs = {inherit self inputs;};
     modules =
        [ (./T480/default.nix)]
