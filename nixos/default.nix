@@ -1,7 +1,7 @@
 { config, inputs, nixpkgs, ...}:
 {
-    import = [
+    imports = [
     ./common/boot.nix
     ./common/networking.nix
-    ]
+    ];
   }

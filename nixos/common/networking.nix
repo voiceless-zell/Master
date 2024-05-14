@@ -1,4 +1,4 @@
-{config, inputs, nixpkgs, config, ...}:
+{inputs, nixpkgs, config, ...}:
 {
     networking = {
     networkmanager.enable = true;
