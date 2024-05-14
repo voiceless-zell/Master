@@ -3,7 +3,7 @@
     imports = [
     ./common/boot.nix
     ./common/networking.nix
-    ./common/programs.nix
+    ./common/program.nix
     ./common/steam.nix
     ./common/obsidian.nix
     ./common/pipewire.nix

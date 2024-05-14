@@ -5,12 +5,12 @@
 	./lazyvim
   ./git
   ./gtk
-  ./hyprland
+  ./hyprland/default.nix
   ./mako
   ./ncspot
   ./packages
   ./startship
-  ./term/kitty
+  ./term/kitty/default.nix
   ./tmux
   ./waybar
   ./wofi
@@ -98,19 +98,19 @@
         ncspot.enable = true;
         lazyvim.enable = true;
         tmux.enable = true;
-        waybar.enable = false;
-        waybarsetting.enable = false;
-        waybarstyle.enable = false;
-        hyprland.enable = false;
-        hyprconfig.enable = false;
-        hyprvar.enable = false;
+        waybar.enable = true;
+        waybarsetting.enable = true;
+        waybarstyle.enable = true;
+        hyprland.enable = true;
+        hyprconfig.enable = true;
+        hyprvar.enable = true;
         git.enable = true;
-        wofi.enable = false;
+        wofi.enable = true;
         zsh.enable = true;
-        mako.enable = false;
+        mako.enable = true;
         starship.enable= true;
-        wlogout.enable = false;
+        wlogout.enable = true;
         packages.enable = true;
-        gtk.enable = false;
-  };
+        gtk.enable = true;
+ };
 }
