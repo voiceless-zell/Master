@@ -22,18 +22,6 @@
   home.username = "zell";
   home.homeDirectory = "/home/zell";
   nixpkgs.config.allowUnfree = true;
-  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
-             "cuda-merged"
-             "cuda_cuobjdump"
-              "cuda_gdb"
-"cuda_nvcc"
-
-             "cuda_nvdisasm"
-             "cuda_nvprune"
-             "cuda_cccl"
-             "cuda_cudart"
-             "cuda_cupti"
-           ];
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
   # introduces backwards incompatible changes.
@@ -45,8 +33,10 @@
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
-  home.packages = [
-    # # Adds the 'hello' command to your environment. It prints a friendly
+  home.packages = with pkgs; [
+    nerdfonts
+  # # Adds the 'hello' command to your environment. It prints a friendly
+
     # # "Hello, world!" when run.
     # pkgs.hello
 
@@ -108,19 +98,19 @@
         ncspot.enable = true;
         lazyvim.enable = true;
         tmux.enable = true;
-        waybar.enable = true;
-        waybarsetting.enable = true;
-        waybarstyle.enable = true;
-        hyprland.enable = true;
-        hyprconfig.enable = true;
-        hyprvar.enable = true;
+        waybar.enable = false;
+        waybarsetting.enable = false;
+        waybarstyle.enable = false;
+        hyprland.enable = false;
+        hyprconfig.enable = false;
+        hyprvar.enable = false;
         git.enable = true;
-        wofi.enable = true;
+        wofi.enable = false;
         zsh.enable = true;
-        mako.enable = true;
+        mako.enable = false;
         starship.enable= true;
-        wlogout.enable = true;
+        wlogout.enable = false;
         packages.enable = true;
-        gtk.enable = true;
+        gtk.enable = false;
   };
 }

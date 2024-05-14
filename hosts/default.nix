@@ -5,6 +5,7 @@
         inherit system;
         config.allowUnfree = true;
       };
+    lib = nixpkgs.lib;
   in 
   {
     G14 = nixpkgs.lib.nixosSystem {

@@ -1,19 +1,17 @@
-{ pkgs, inputs, config, ... }:
+{ pkgs, nixpkgs, inputs, config, ... }:
 {
   imports = [
   ./hardware-configuration.nix
+  ./../../nixos
   ];
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelModules = [ "kvm-amd" ];
   boot.kernel.sysctl = {
   "vm.max_map_count" = 20971520;
   "fs.file-max" = 524288;
 };
+nixpkgs.config.allowUnfree = true;
  networking = {
     hostName = "G14";
-    networkmanager.enable = true;
-    firewall.enable = false;
   };
   zramSwap.enable = true;
   services.xserver = {
