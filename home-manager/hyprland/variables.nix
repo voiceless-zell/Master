@@ -7,7 +7,7 @@ in
   options.modules.hyprvar = { enable = mkEnableOption "hyprvar"; };
   config = mkIf cfg.enable {
   home.sessionVariables = {
-    FLAKE = "/home/zell/flake2/";
+    FLAKE = "/home/zell/non-nix-flake/";
     NIXOS_OZONE_WL = "1";
     GDK_BACKEND = "wayland";
     WLR_DRM_NO_ATOMIC = "1";

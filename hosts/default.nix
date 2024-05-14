@@ -1,4 +1,4 @@
-{ nixpkgs, self, inputs,...}:
+{ nixpkgs, nixos-hardware, self, inputs,...}:
   let
     system = "x86_64-linux";
     pkgs = import nixpkgs {
@@ -13,7 +13,7 @@
     modules =
        [ (./G14/default.nix)]
     ++ [ ( ./../users/zell.nix)]
-#++ [ (nixos-hardware.nixosModules.asus-zephyrus-ga401)]
+    ++ [ (nixos-hardware.nixosModules.asus-zephyrus-ga401)]
    ;
   }; 
     T480 = nixpkgs.lib.nixosSystem {

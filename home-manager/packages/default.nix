@@ -52,6 +52,7 @@
       tree-sitter
       ruby
       nodejs
+      nvtopPackages.full
 ];
     };
 }
