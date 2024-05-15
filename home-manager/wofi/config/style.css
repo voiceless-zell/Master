@@ -4,7 +4,7 @@
      margin: 0px;
      border: 2px solid #595959;
      background-color: rgba(31, 31, 31, 0.95);
-     border-radius: 0px;
+     border-radius: 1px;
    }
    #input {
      all: unset;

@@ -7,6 +7,30 @@ in{
   options.modules.waybarstyle = { enable = mkEnableOption "waybarstyle"; };
   config = mkIf cfg.enable {
   programs.waybar.style = ''
+
+    /*
+*
+* Base16 Tokyo City Terminal Dark
+* Author: Michaël Ball
+*
+*/
+
+@define-color base00 #171d23;
+@define-color base01 #1d252c;
+@define-color base02 #28323a;
+@define-color base03 #526270;
+@define-color base04 #b7c5d3;
+@define-color base05 #d8e2ec;
+@define-color base06 #f6f6f8;
+@define-color base07 #fbfbfd;
+@define-color base08 #d95468;
+@define-color base09 #ff9e64;
+@define-color base0A #ebbf83;
+@define-color base0B #8bd49c;
+@define-color base0C #70e1e8;
+@define-color base0D #539afc;
+@define-color base0E #b62d65;
+@define-color base0F #dd9d82;
     * {
         font-weight: normal;
         font-size: 14px;
@@ -16,7 +40,7 @@ in{
     }
 
     window#waybar {
-        background-color: transparent;
+        background-color: @base00;
     }
 
     window>box {
@@ -25,7 +49,7 @@ in{
         margin-top: 1px;
         border: 2px solid ;
         border-radius: 0px;
-        background-color: rgba(31, 31, 31, 1);
+        background-color: @base00;
     }
 
     #workspaces {
@@ -43,7 +67,7 @@ in{
     }
 
     tooltip {
-        background: rgb(48, 45, 65);
+        background: @base01;
     }
 
     tooltip label {
