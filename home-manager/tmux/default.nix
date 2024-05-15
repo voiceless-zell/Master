@@ -12,9 +12,6 @@ programs.tmux ={
   escapeTime = 10;
   historyLimit = 100000;
   plugins = (with pkgs; [
-      tmuxPlugins.better-mouse-mode
-      tmuxPlugins.continuum
-      tmuxPlugins.resurrect
       {
         plugin = tmuxPlugins.mkTmuxPlugin {
           pluginName = "tokyo-night-tmux";
@@ -33,13 +30,6 @@ programs.tmux ={
   set -g @plugin 'fabioluciano/tmux-tokyo-night'
   set-option -g mouse on
   set -g default-terminal 'tmux-256color'
-  set -as terminal-overrides ",foot*:Tc"
-  set -g @resurrect-strategy-nvim 'session'
-  set -g @resurrect-capture-pane-contents 'on'
-  set -g @continuum-restore 'on'
-  set -g @continuum-boot 'on'
-  set -g @continuum-boot-options 'foot'
-  set -g @continuum-save-interval '10'
   '';
 };
 };

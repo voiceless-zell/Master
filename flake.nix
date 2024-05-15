@@ -20,7 +20,9 @@
 # Star Citizen
     nix-citizen.url = "github:LovingMelody/nix-citizen";
     nix-citizen.inputs.nix-gaming.follows = "nix-gaming";
+    nix-colors.url = "github:misterio77/nix-colors";
   };
+
 
   outputs = { nixpkgs, home-manager, self, nixos-hardware, ... }@inputs:
     let
@@ -29,7 +31,7 @@
       lib = nixpkgs.lib;
     in {
       nixosConfigurations = import ./hosts/default.nix {
-          inherit self nixpkgs inputs nixos-hardware ;
+          inherit self nixpkgs inputs ;
         } ;
       
       homeConfigurations."zell" = home-manager.lib.homeManagerConfiguration {
@@ -39,7 +41,7 @@
         # the path to your home.nix.
         modules = [ ./home-manager/home.nix 
         inputs.hyprland.homeManagerModules.default];
-
+        extraSpecialArgs = { inherit inputs; };
         # Optionally use extraSpecialArgs
         # to pass through arguments to home.nix
       };

@@ -26,12 +26,13 @@ in {
     };
     shellAliases = {
       ncg = "nix-collect-garbage && nix-collect-garbage -d && sudo nix-collect-garbage && sudo nix-collect-garbage -d && sudo rm /nix/var/nix/gcroots/auto/*";
+      fl = "v ~/non-nix-flake/";
       v = "nvim";
       ls = "eza --icons --long";
       # nixos
-      hm = "cd ~/.config/home-manager/ && v";
       notes = "cd ~/notes/ && v";
       music = "ncspot";
+      vm = "sudo virsh net-start default";
     };
   };
   };

@@ -1,8 +1,9 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, inputs, ... }:
 
 {
   imports = [
 	./lazyvim
+  ./firefox
   ./git
   ./gtk
   ./hyprland/default.nix
@@ -16,7 +17,10 @@
   ./wofi
   ./wlogout
   ./zsh
+  ./swayidle
+  inputs.nix-colors.homeManagerModules.default
   ];
+  colorScheme = inputs.nix-colors.colorSchemes.tokyo-night-terminal-dark;
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "zell";
@@ -112,5 +116,6 @@
         wlogout.enable = true;
         packages.enable = true;
         gtk.enable = true;
+        swaylock.enable = true;
  };
 }

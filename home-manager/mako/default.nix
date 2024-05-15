@@ -18,7 +18,7 @@ in {
       defaultTimeout = 5000;
       borderSize = 2;
       borderRadius = 0;
-      backgroundColor = "#1F1F1F";
+      backgroundColor = "#${config.colorScheme.colors.base00}";
       borderColor = "#595959";
       progressColor = "over #313244";
       textColor = "#cdd6f4";

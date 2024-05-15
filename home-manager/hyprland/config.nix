@@ -11,6 +11,8 @@ config = mkIf cfg.enable {
     extraConfig = "
       $mainMod = SUPER
       #TODO Add swipe gesture for workspaces
+      
+      monitor=eDP-1,1920x1080,0x0,1
 
       input {
           kb_layout = us
@@ -203,6 +205,7 @@ config = mkIf cfg.enable {
       exec-once = swww init && swaylock && notify-send 'Hey $USER, Welcome back' && load-env 
       exec-once = nohup ~/Master/backgrounds/swww_randomize.sh ~/Master/backgrounds > output.log 2>/dev/null &
       exec-once = wl-paste --type text --watch cliphist store && wl-paste --type image --watch cliphist store && mako &
+            exec-once = swww init && swaylock && notify-send 'Hey $USER, Welcome back' && load-env 
     ";
   };
 };
