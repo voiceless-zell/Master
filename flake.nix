@@ -21,10 +21,11 @@
     nix-citizen.url = "github:LovingMelody/nix-citizen";
     nix-citizen.inputs.nix-gaming.follows = "nix-gaming";
     nix-colors.url = "github:misterio77/nix-colors";
+    nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
   };
 
 
-  outputs = { nixpkgs, home-manager, self, nixos-hardware, ... }@inputs:
+  outputs = { nixpkgs, home-manager, self, nixos-hardware, nixos-wsl, ... }@inputs:
     let
       pkgs = import nixpkgs { system = "x86_64-linux"; config.allowunfree = true;};
       system = "x86_64-linux";

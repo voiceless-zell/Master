@@ -1,8 +1,8 @@
-{ nixpkgs, nixos-hardware, self, inputs,...}:
+{ nixpkgs, nixos-hardware, self, inputs, nixos-wsl, ...}:
   let
     system = "x86_64-linux";
     pkgs = import nixpkgs {
-        inherit system;
+        inherit system inputs;
         config.allowUnfree = true;
       };
     lib = nixpkgs.lib;
@@ -24,4 +24,11 @@
 #++ [ (nixos-hardware.nixosModules.asus-zephyrus-ga401)]
    ;
   };
+    WSL = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs self; };
+        modules = 
+        [ (./WSL/default.nix)]
+     ++ [ (nixos-wsl.nixosModules.default)]
+       ;
+      };
   }
