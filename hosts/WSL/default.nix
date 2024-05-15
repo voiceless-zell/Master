@@ -1,7 +1,6 @@
 { pkgs, nixpkgs, inputs, config, ... }:
 {
   imports = [
-  ./../../nixos
   ];
 nixpkgs.config.allowUnfree = true;
  networking = {
@@ -9,4 +8,9 @@ nixpkgs.config.allowUnfree = true;
   };
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   services.gvfs.enable = true;
-}
+  wsl = {
+      enable = true;
+  };
+nixpkgs.hostPlatform = "x86_64-linux";
+    }
+

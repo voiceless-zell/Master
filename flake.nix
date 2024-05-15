@@ -32,7 +32,7 @@
       lib = nixpkgs.lib;
     in {
       nixosConfigurations = import ./hosts/default.nix {
-          inherit self nixpkgs inputs ;
+          inherit self nixpkgs inputs nixos-hardware nixos-wsl ;
         } ;
       
       homeConfigurations."zell" = home-manager.lib.homeManagerConfiguration {
