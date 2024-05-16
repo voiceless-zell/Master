@@ -96,8 +96,8 @@ config = mkIf cfg.enable {
 
       # ----------------------------------------------------------------
       # keybindings
-      bind = $mainMod, Return, exec, kitty -e tmux 
-      bind = $mainMod SHIFT, Return, exec, kitty -e tmux --fullscreen
+      bind = $mainMod, Return, exec, kitty
+      bind = $mainMod SHIFT, Return, exec, kitty --fullscreen
       bind = $mainMod, Q, killactive,
       bind = $mainMod, T, killactive,
       bind = $mainMod SHIFT, F, fullscreen,
