@@ -1,6 +1,7 @@
 { pkgs, nixpkgs, inputs, config, ... }:
 {
   imports = [
+  ./../../nixos/common/program.nix
   ];
 nixpkgs.config.allowUnfree = true;
  networking = {
