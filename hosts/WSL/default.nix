@@ -11,6 +11,10 @@ nixpkgs.config.allowUnfree = true;
   services.gvfs.enable = true;
   wsl = {
       enable = true;
+      defaultUser = "zell";
+      nativeSystemd = true;
+      useWindowsDriver = true;
+
   };
 nixpkgs.hostPlatform = "x86_64-linux";
     }
