@@ -28,7 +28,7 @@
         specialArgs = {inherit inputs self; };
         modules = 
         [ (./WSL/default.nix)]
-        [ (./../users/zell.nix)]
+     ++ [ (./../users/zell.nix)]
      ++ [ (nixos-wsl.nixosModules.default)]
        ;
       };
