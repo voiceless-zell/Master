@@ -2,6 +2,7 @@
 {
   imports = [
   ./../../nixos/common/program.nix
+  ./../../nixos/common/system.nix
   ];
 nixpkgs.config.allowUnfree = true;
  networking = {
