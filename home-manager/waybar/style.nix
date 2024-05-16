@@ -31,83 +31,146 @@ in{
 @define-color base0D #539afc;
 @define-color base0E #b62d65;
 @define-color base0F #dd9d82;
-    * {
-        font-weight: normal;
-        font-size: 14px;
-        min-height: 0;
-        transition-property: background-color;
-        transition-duration: 0.5s;
-    }
+    * #waybar {
+    font-family: "SF Pro Display", Cantarell, Noto Sans, sans-serif;
+    font-size: 16px;
+    border-radius: 16px;
+    margin-right: 2px;
+    margin-left: 2px;
+}
 
-    window#waybar {
-        background-color: @base00;
-    }
+#window {
+    margin-top: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+	border-radius: 26px;
+	transition: none;
+	/*
+    color: #f8f8f2;
+	background: #282a36;
+    */
+    color: transparent;
+	background: transparent;
+}
 
-    window>box {
-        margin-left: 5px;
-        margin-right: 5px;
-        margin-top: 1px;
-        border: 2px solid ;
-        border-radius: 0px;
-        background-color: @base00;
-    }
+window#waybar {
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    text-shadow: none;
+    transition-duration: 0s;
+    color: rgba(217, 216, 216, 1);
+    background: #1a1b26; 
+} 
 
-    #workspaces {
-        padding-left: 0px;
-        padding-right: 4px;
-        border-radius: 0px;
-    }
+#workspaces {
+    margin: 0 5px;
+    border-radius: 16px;
+}
 
-    #workspaces button {
-        padding-top: 5px;
-        border-radius: 0px;
-        padding-bottom: 5px;
-        padding-left: 8px;
-        padding-right: 8px;
-    }
+#workspaces button {
+    padding: 0 8px;
+    color: #565f89;
+    border: 3px solid rgba(9, 85, 225, 0);
+    border-radius: 16px;
+    padding-left: 10px;
+    padding-right: 10px;
+    min-width: 33px;
+}
 
-    tooltip {
-        background: @base01;
-    }
+#workspaces button.visible {
+    color: #a9b1d6;
+}
 
-    tooltip label {
-        color: rgb(217, 224, 238);
-    }
+#workspaces button.focused {
+    border-top: 3px solid #7aa2f7;
+    border-bottom: 3px solid #7aa2f7;
+}
 
-    #custom-launcher {
-        font-size: 16px;
-        padding-left: 10px;
-        padding-right: 6px;
-        color: #6896BA;
-    }
+#workspaces button.urgent {
+    background-color: #a96d1f;
+    color: white;
+}
 
-    #clock,
-    #memory,
-    #temperature,
-    #cpu,
-    #mpd,
-    #custom-wall,
-    #temperature,
-    #backlight,
-    #pulseaudio,
-    #network,
-    #battery,
-    #disk,
-    #idle_inhibitor {
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-top: 0px;
-        padding-bottom: 0px;
-        color: #B9B9B9;
+#workspaces button:hover {
+    box-shadow: inherit;
+    border-color: #bb9af7;
+    color: #bb9af7;
+}
+
+/* Repeat style here to ensure properties are overwritten as there's no !important and button:hover above resets the colour */
+
+#workspaces button.focused {
+    color: #7aa2f7;
+}
+#workspaces button.focused:hover {
+    color: #bb9af7;
+}
+
+#pulseaudio {
+    /* font-size: 26px; */
+}
+
+#custom-recorder {
+	font-size: 18px;
+	margin: 2px 7px 0px 7px;
+	color:#ee2e24;
+}
+
+#tray,
+#mode,
+#battery,
+#temperature,
+#cpu,
+#memory,
+#network,
+#pulseaudio,
+#idle_inhibitor,
+#sway-language,
+#backlight,
+#custom-storage,
+#custom-cpu_speed,
+#custom-powermenu,
+#custom-spotify,
+#custom-weather,
+#custom-mail,
+#custom-media {
+    margin: 0px 0px 0px 10px;
+    padding: 0 5px;
+    /* border-top: 3px solid rgba(217, 216, 216, 0.5); */
+}
+
+/* #clock {
+    margin:     0px 16px 0px 10px;
+    min-width:  140px;
+} */
+
+#battery.warning {
+    color: rgba(255, 210, 4, 1);
+}
+
+#battery.critical {
+    color: rgba(238, 46, 36, 1);
+}
+
+#battery.charging {
+    color: rgba(217, 216, 216, 1);
+}
+
+#custom-storage.warning {
+    color: rgba(255, 210, 4, 1);
+}
+
+#custom-storage.critical {
+    color: rgba(238, 46, 36, 1);
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: black;
     }
-    #cava {
-      padding-left: 10px;
-      padding-right: 10px;
-    }
-    #tray {
-        padding-right: 8px;
-        padding-left: 10px;
-    }
+}
   '';
   };
 }
