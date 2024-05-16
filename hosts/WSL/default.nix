@@ -4,7 +4,7 @@
   ];
 nixpkgs.config.allowUnfree = true;
  networking = {
-    hostName = "G14";
+    hostName = "WSL";
   };
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   services.gvfs.enable = true;
