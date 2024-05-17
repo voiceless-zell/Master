@@ -31,19 +31,20 @@ in{
 @define-color base0D #539afc;
 @define-color base0E #b62d65;
 @define-color base0F #dd9d82;
-    * #waybar {
+* #waybar {
     font-family: "SF Pro Display", Cantarell, Noto Sans, sans-serif;
     font-size: 16px;
-    border-radius: 16px;
-    margin-right: 2px;
-    margin-left: 2px;
+    border-radius: 20px;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-top: 30px;
 }
 
 #window {
-    margin-top: 8px;
+    margin-top: 15px;
     padding-left: 16px;
-    padding-right: 16px;
-	border-radius: 26px;
+    padding-right: 20px;
+	border-radius: 15px;
 	transition: none;
 	/*
     color: #f8f8f2;
@@ -54,18 +55,22 @@ in{
 }
 
 window#waybar {
-    border: none;
     border-radius: 0;
     box-shadow: none;
     text-shadow: none;
     transition-duration: 0s;
     color: rgba(217, 216, 216, 1);
-    background: #1a1b26; 
+    background: transparent; 
 } 
+
+window#waybar.empty #window {
+    background-color: transparent;
+  }
 
 #workspaces {
     margin: 0 5px;
     border-radius: 16px;
+    background-color: #1a1b26;
 }
 
 #workspaces button {
@@ -109,23 +114,68 @@ window#waybar {
 
 #pulseaudio {
     /* font-size: 26px; */
+       border-radius: 16px;
+    background-color: #1a1b26;
+
 }
 
-#custom-recorder {
-	font-size: 18px;
-	margin: 2px 7px 0px 7px;
-	color:#ee2e24;
-}
 
-#tray,
+#tray {
+       border-radius: 16px;
+    background-color: #1a1b26;
+}
 #mode,
-#battery,
-#temperature,
-#cpu,
-#memory,
-#network,
+#battery {
+     border-radius: 16px;
+    background-color: #1a1b26;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#temperature {
+       border-radius: 16px;
+    background-color: #1a1b26;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#cpu {
+       border-radius: 16px;
+    background-color: #1a1b26;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#memory {
+       border-radius: 16px;
+    background-color: #1a1b26;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#network {
+       border-radius: 16px;
+    background-color: #1a1b26;
+    padding-left: 10px;
+    padding-right: 10px;
+}
 #pulseaudio,
-#idle_inhibitor,
+#idle_inhibitor{
+    padding: 0 8px;
+       border-radius: 16px;
+    background-color: #1a1b26;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#cpu {
+       border-radius: 16px;
+    background-color: #1a1b26;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#disk {
+       border-radius: 16px;
+    background-color: #1a1b26;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
 #sway-language,
 #backlight,
 #custom-storage,
@@ -140,10 +190,12 @@ window#waybar {
     /* border-top: 3px solid rgba(217, 216, 216, 0.5); */
 }
 
-/* #clock {
+ #clock {
     margin:     0px 16px 0px 10px;
     min-width:  140px;
-} */
+       border-radius: 16px;
+    background-color: #1a1b26;
+} 
 
 #battery.warning {
     color: rgba(255, 210, 4, 1);

@@ -11,7 +11,6 @@ in{
       "layer" = "top";
       "position" = "top";
       modules-left = [
-        "custom/launcher"
         "temperature"
         "idle_inhibitor"
         "hyprland/workspaces" 
@@ -32,11 +31,6 @@ in{
         "cava"
         "tray"
       ];
-      "custom/launcher" = {
-        "format" = " ";
-        "on-click" = "pkill wofi || wofi";
-        "tooltip" = false;
-      };
       "idle_inhibitor" = {
         "format" = "{icon}";
         "format-icons" = {

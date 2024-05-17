@@ -4,7 +4,7 @@
   ./hardware-configuration.nix
   ./../../nixos
   ];
-  boot.kernelModules = [ "kvm-amd" ];
+  boot.kernelModules = [ "amdgpu" ];
   boot.kernel.sysctl = {
   "vm.max_map_count" = 20971520;
   "fs.file-max" = 524288;
@@ -17,7 +17,7 @@ nixpkgs.config.allowUnfree = true;
   services.xserver = {
     enable = true;
     xkb.layout = "us";
-    videoDrivers = [  "nvidia"  ];
+    videoDrivers = [ "nvidia"  "modesetting" ];
     desktopManager.gnome = {
         enable = true;
         };

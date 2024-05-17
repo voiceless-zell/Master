@@ -38,6 +38,7 @@
       discord
       eza
       obsidian
+      cmatrix
       glib
       #programming
       nix-prefetch-github

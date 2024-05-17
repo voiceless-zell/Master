@@ -38,7 +38,7 @@ in{
             };
           };
           settings = {
-            "general.smoothScroll" = true;
+            "general.smoothScroll" = false;
              };
       };
     };

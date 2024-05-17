@@ -36,6 +36,7 @@ in {
       notes = "cd ~/notes/ && v";
       music = "ncspot";
       vm = "sudo virsh net-start default";
+      startbg = " nohup ~/non-nix-flake/backgrounds/swww_randomize.sh ~/non-nix-flake/backgrounds > output.log 2>&1 &";
     };
   };
   };

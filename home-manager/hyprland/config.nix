@@ -71,9 +71,9 @@ config = mkIf cfg.enable {
 
 
       decoration {
-          rounding = 0
-          active_opacity = 0.9000;
-          inactive_opacity = 0.50;
+          rounding = 10 
+          active_opacity = 0.95;
+          inactive_opacity = 0.80;
           drop_shadow = 0
             blur {
               enabled = true
