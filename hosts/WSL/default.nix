@@ -15,6 +15,7 @@ nixpkgs.config.allowUnfree = true;
       defaultUser = "zell";
       nativeSystemd = true;
       useWindowsDriver = true;
+      startMenuLaunchers = true;
 
   };
 nixpkgs.hostPlatform = "x86_64-linux";
