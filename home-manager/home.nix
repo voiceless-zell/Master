@@ -18,6 +18,7 @@
   ./wlogout
   ./zsh
   ./swayidle
+  ./qute
   inputs.nix-colors.homeManagerModules.default
   ];
   colorScheme = inputs.nix-colors.colorSchemes.tokyo-night-terminal-dark;
