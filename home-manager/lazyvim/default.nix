@@ -28,6 +28,7 @@ in {
     plugins = with pkgs.vimPlugins; [
       lazy-nvim
       obsidian-nvim
+      vimwiki
       
     ];
     extraLuaConfig = 
@@ -119,6 +120,7 @@ in {
             -- treesitter handled by xdg.configFile."nvim/parser", put this line at the end of spec to clear ensure_installed
             { "nvim-treesitter/nvim-treesitter", opts = { ensure_installed = {} } },
             { "epwalsh/obsidian.nvim", version = "*", lazy = true, ft= "markdown", lazy = false },
+            { "vimwiki/vimwiki", version = "*"}
           },
         })
       '';
