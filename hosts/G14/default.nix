@@ -23,6 +23,17 @@ nixpkgs.config.allowUnfree = true;
         };
     };
     hardware = {
+      nvidia = {
+          modesetting.enable = true;
+          powerManagement.enable = false;
+          open = false;
+          package = config.boot.kernelPackages.nvidiaPackages.stable;
+          nvidiaSettings = true;
+          prime = {
+              amdgpuBusId = "PCI:4:0:0";
+              nvidiaBusId = "PCI:1:0:0";
+            };
+        };
       opengl = {
         enable = true;
         driSupport = true;

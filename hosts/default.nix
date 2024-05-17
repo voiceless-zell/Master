@@ -13,7 +13,7 @@
     modules =
        [ (./G14/default.nix)]
     ++ [ ( ./../users/zell.nix)]
-    ++ [ (nixos-hardware.nixosModules.asus-zephyrus-ga401)]
+  # ++ [ (nixos-hardware.nixosModules.asus-zephyrus-ga401)]
    ;
   }; 
     T480 = nixpkgs.lib.nixosSystem {
