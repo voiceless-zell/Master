@@ -3,6 +3,7 @@
   imports = [
   ./hardware-configuration.nix
   ./../../nixos
+  ./../../nixos/common/tailscale.nix
   ];
   boot.kernelModules = [ "amdgpu" ];
   boot.kernel.sysctl = {
@@ -21,6 +22,12 @@ nixpkgs.config.allowUnfree = true;
     desktopManager.gnome = {
         enable = true;
         };
+        libinput = {
+        enable = true;
+        mouse = {
+            accelProfile = "flat";
+          };
+      };
     };
     hardware = {
       nvidia = {
@@ -46,6 +53,6 @@ nixpkgs.config.allowUnfree = true;
   services.gvfs.enable = true;
   services.tailscale = {
     enable = true;
-    useRoutingFeatures = "client"
+    useRoutingFeatures = "client";
     };
 }

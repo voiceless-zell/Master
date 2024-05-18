@@ -5,15 +5,10 @@
   ./../../nixos
   ];
   boot.kernelModules = [ "kvm-intel" ];
-  boot.kernel.sysctl = {
-  "vm.max_map_count" = 20971520;
-  "fs.file-max" = 524288;
-};
 nixpkgs.config.allowUnfree = true;
  networking = {
     hostName = "T480";
   };
-  zramSwap.enable = true;
   services.xserver = {
     enable = true;
     xkb.layout = "us";
@@ -21,6 +16,12 @@ nixpkgs.config.allowUnfree = true;
     desktopManager.gnome = {
         enable = true;
         };
+    libinput = {
+        enable = true;
+        mouse = {
+            accelProfile = "flat";
+          };
+      };
     };
     hardware = {
       opengl = {
