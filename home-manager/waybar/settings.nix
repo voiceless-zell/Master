@@ -12,7 +12,6 @@ in{
       "position" = "top";
       modules-left = [
         "temperature"
-        "idle_inhibitor"
         "hyprland/workspaces" 
         "battery"
       ];
@@ -31,13 +30,6 @@ in{
         "cava"
         "tray"
       ];
-      "idle_inhibitor" = {
-        "format" = "{icon}";
-        "format-icons" = {
-          "activated" = "";
-          "deactivated" = "";
-        };
-      };
       "disk" = {
         "path" = "/home";
         "format" = "󰋊 {percentage_used}%";

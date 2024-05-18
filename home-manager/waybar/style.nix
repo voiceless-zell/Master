@@ -70,13 +70,13 @@ window#waybar.empty #window {
 #workspaces {
     margin: 0 5px;
     border-radius: 16px;
-    background-color: #1a1b26;
+    background-color: #394b70;
 }
 
 #workspaces button {
     padding: 0 8px;
-    color: #565f89;
-    border: 3px solid rgba(9, 85, 225, 0);
+    color:  #ff9e64 ;
+    border: 1px solid  #ff007c ; 
     border-radius: 16px;
     padding-left: 10px;
     padding-right: 10px;
@@ -127,51 +127,42 @@ window#waybar.empty #window {
 #mode,
 #battery {
      border-radius: 16px;
-    background-color: #1a1b26;
+    background-color: #394b70;
     padding-left: 10px;
     padding-right: 10px;
 }
 #temperature {
        border-radius: 16px;
-    background-color: #1a1b26;
-    padding-left: 10px;
-    padding-right: 10px;
+    background-color: #394b70;
 }
 #cpu {
        border-radius: 16px;
-    background-color: #1a1b26;
+    background-color: #394b70;
     padding-left: 10px;
     padding-right: 10px;
 }
 #memory {
        border-radius: 16px;
-    background-color: #1a1b26;
+    background-color: #394b70;
     padding-left: 10px;
     padding-right: 10px;
 }
 #network {
        border-radius: 16px;
-    background-color: #1a1b26;
+    background-color: #394b70;
     padding-left: 10px;
     padding-right: 10px;
 }
 #pulseaudio,
-#idle_inhibitor{
-    padding: 0 8px;
-       border-radius: 16px;
-    background-color: #1a1b26;
-    padding-left: 10px;
-    padding-right: 10px;
-}
 #cpu {
        border-radius: 16px;
-    background-color: #1a1b26;
+    background-color: #394b70;
     padding-left: 10px;
     padding-right: 10px;
 }
 #disk {
        border-radius: 16px;
-    background-color: #1a1b26;
+    background-color: #394b70;
     padding-left: 10px;
     padding-right: 10px;
 }
@@ -194,7 +185,7 @@ window#waybar.empty #window {
     margin:     0px 16px 0px 10px;
     min-width:  140px;
        border-radius: 16px;
-    background-color: #1a1b26;
+    background-color: #394b70;
 } 
 
 #battery.warning {
