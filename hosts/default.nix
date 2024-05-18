@@ -32,4 +32,12 @@
      ++ [ (nixos-wsl.nixosModules.default)]
        ;
       };
+    P72 = nixpkgs.lib.nixosSystem {
+    specialArgs = {inherit self inputs;};
+    modules =
+       [ (./P72/default.nix)]
+    ++ [ ( ./../users/zell.nix)]
+#++ [ (nixos-hardware.nixosModules.asus-zephyrus-ga401)]
+   ;
+  };
   }
