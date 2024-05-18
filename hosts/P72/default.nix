@@ -1,5 +1,11 @@
 {pkgs, inputs, config, nixpkgs, self, ...}: 
 {        
+  imports = [
+  ./hardware-configuration.nix
+  ./../../nixos
+ # ./../../nixos/common/tailscale.nix
+  ];
+ 
 boot.loader.systemd-boot.enable = true;
 boot.initrd.availableKernelModules = [  "vfio-pci"];
 boot.kernelPackages = pkgs.linuxPackages_latest;
