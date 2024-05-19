@@ -55,4 +55,5 @@ nixpkgs.config.allowUnfree = true;
     enable = true;
     useRoutingFeatures = "client";
     };
+    services.asusd.enable = true;
 }
