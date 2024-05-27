@@ -40,4 +40,13 @@
 #++ [ (nixos-hardware.nixosModules.asus-zephyrus-ga401)]
    ;
   };
+    P16 = nixpkgs.lib.nixosSystem {
+    specialArgs = {inherit self inputs;};
+    modules =
+       [ (./P16/default.nix)]
+    ++ [ ( ./../users/zell.nix)]
+#++ [ (nixos-hardware.nixosModules.asus-zephyrus-ga401)]
+   ;
+  };
+
   }
