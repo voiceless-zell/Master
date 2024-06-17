@@ -29,14 +29,14 @@ in {
     };
     shellAliases = {
       ncg = "nix-collect-garbage && nix-collect-garbage -d && sudo nix-collect-garbage && sudo nix-collect-garbage -d && sudo rm /nix/var/nix/gcroots/auto/*";
-      fl = "cd ~/Master/ && v";
+      fl = "cd ~/master/ && v";
       v = "nvim";
       ls = "eza --icons --long";
       # nixos
       notes = "cd ~/notes/ && v";
       music = "ncspot";
       vm = "sudo virsh net-start default";
-      startbg = " nohup ~/Master/backgrounds/swww_randomize.sh ~/Master/backgrounds > output.log 2>&1 &";
+      startbg = " nohup ~/master/backgrounds/swww_randomize.sh ~/master/backgrounds > output.log 2>&1 &";
     };
   };
   };
