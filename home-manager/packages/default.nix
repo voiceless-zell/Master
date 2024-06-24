@@ -17,10 +17,7 @@
     config = mkIf cfg.enable {
         home.packages = with pkgs; [
       # others
-      firefox
-      bitwarden
       p7zip
-      neofetch
       openssl
       libnotify
       pamixer
@@ -28,16 +25,13 @@
       pavucontrol
       wget
       unzip
-      gparted
       mpv
       playerctl
       qalculate-gtk
       htop
       fzf
       ffmpeg
-      discord
       eza
-      obsidian
       cmatrix
       glib
       #programming
@@ -54,14 +48,6 @@
       ruby
       nodejs
       nvtopPackages.full
-      inputs.nix-citizen.packages.${system}.star-citizen
-      inputs.nix-citizen.packages.${system}.star-citizen-helper
-      inputs.nix-citizen.packages.${system}.lug-helper
-      lutris
-     wineWowPackages.waylandFull
-      winetricks
-   #  wine
-   #   wineWowPackages.stable
       python312Packages.huggingface-hub
 ];
     };

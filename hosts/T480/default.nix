@@ -3,7 +3,8 @@
   imports = [
   ./hardware-configuration.nix
   ./../../nixos
-  ];
+  ./../../home-manager/hyprland  
+    ];
   boot.kernelModules = [ "kvm-intel" ];
 nixpkgs.config.allowUnfree = true;
  networking = {

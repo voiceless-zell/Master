@@ -6,7 +6,6 @@
   ./firefox
   ./git
   ./gtk
-  ./hyprland/default.nix
   ./mako
   ./ncspot
   ./packages
