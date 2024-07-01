@@ -4,7 +4,7 @@
     "zell" = {
     isNormalUser = true;
     description = "Pete";
-    extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
+    extraGroups = [ "networkmanager" "wheel" "libvirtd" "input" ];
     shell = pkgs.zsh;
     };
   };

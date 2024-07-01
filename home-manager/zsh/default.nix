@@ -29,7 +29,7 @@ in {
     };
     shellAliases = {
       ncg = "nix-collect-garbage && nix-collect-garbage -d && sudo nix-collect-garbage && sudo nix-collect-garbage -d && sudo rm /nix/var/nix/gcroots/auto/*";
-      fl = "cd ~/master/ && v";
+      fl = "cd ~/Master/ && v";
       v = "nvim";
       ls = "eza --icons --long";
       # nixos

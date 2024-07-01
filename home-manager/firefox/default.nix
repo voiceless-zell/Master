@@ -1,11 +1,11 @@
-{ config, pkgs, theme, inputs, lib, ... }:
+{ config, pkgs, theme, inputs, lib, isNIXOS, ... }:
+
 with lib;
   let
     cfg = config.modules.firefox;
 
 in{
-  options.modules.firefox = { enable = mkEnableOption "firefox";};
-  config = mkIf cfg.enable {
+  lib.mkIf isNIXOS {
   programs.firefox = {      
       enable = true;
       profiles = {
