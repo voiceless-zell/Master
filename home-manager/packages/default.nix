@@ -35,7 +35,7 @@
       htop
       fzf
       ffmpeg
-      discord
+    #  discord
       eza
       obsidian
       cmatrix
@@ -54,12 +54,12 @@
       ruby
       nodejs
       nvtopPackages.full
-      inputs.nix-citizen.packages.${system}.star-citizen
-      inputs.nix-citizen.packages.${system}.star-citizen-helper
-      inputs.nix-citizen.packages.${system}.lug-helper
-      lutris
-     wineWowPackages.waylandFull
-      winetricks
+    #  inputs.nix-citizen.packages.${system}.star-citizen
+    #  inputs.nix-citizen.packages.${system}.star-citizen-helper
+    #  inputs.nix-citizen.packages.${system}.lug-helper
+    #  lutris
+    # wineWowPackages.waylandFull
+    #  winetricks
    #  wine
    #   wineWowPackages.stable
       python312Packages.huggingface-hub

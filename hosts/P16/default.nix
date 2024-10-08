@@ -1,11 +1,10 @@
-{pkgs, inputs, config, nixpkgs, self, isNIXOS, ...}: 
+{pkgs, inputs, config, nixpkgs, self, ...}: 
 {        
   imports = [
   ./hardware-configuration.nix
   ./../../nixos
   ./../../nixos/common/tailscale.nix
   ];
-isNIXOS = true; 
 boot.loader.systemd-boot.enable = true;
 boot.kernelPackages = pkgs.linuxPackages_latest;
 boot.kernelModules = [ "intel" ];

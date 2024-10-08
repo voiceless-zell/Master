@@ -1,11 +1,11 @@
-{ config, pkgs, theme, inputs, lib, isNIXOS, ... }:
+{ config, pkgs, theme, inputs, lib,  ... }:
 
 with lib;
   let
     cfg = config.modules.firefox;
 
 in{
-  lib.mkIf isNIXOS {
+  lib.mkIf = {
   programs.firefox = {      
       enable = true;
       profiles = {
